@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "214614703532",
+    "firebase_url": "https://flex-000.firebaseio.com",
+    "project_id": "flex-000",
+    "storage_bucket": "flex-000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214614703532:android:c41de6cc49d2f6b1",
+        "android_client_info": {
+          "package_name": "org.avinalabs.flex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214614703532-pgqic8rhit7nphio9iin295hb1ptk2hu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.avinalabs.flex",
+            "certificate_hash": "bf1636b4683002880c55422de809625885840e05"
+          }
+        },
+        {
+          "client_id": "214614703532-v4lno5at6bichdp5nrpmajfmmgn1bj58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8REcljskT7arhhLlECfMJ9G69cQ0LV7U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214614703532-v4lno5at6bichdp5nrpmajfmmgn1bj58.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "214614703532-aocaetpdk47ms3agkomjq3mhuu5lkvdg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.avinalabs.Flex"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
