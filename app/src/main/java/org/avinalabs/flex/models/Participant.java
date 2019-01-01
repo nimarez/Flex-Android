@@ -1,4 +1,4 @@
-package org.avinalabs.flex.Types;
+package org.avinalabs.flex.models;
 
 
 public class Participant {

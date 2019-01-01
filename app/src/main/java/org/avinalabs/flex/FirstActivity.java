@@ -1,48 +1,62 @@
 package org.avinalabs.flex;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
+import org.avinalabs.flex.facilitators.FHomeActivity;
+import org.avinalabs.flex.participants.PHomeActivity;
+import org.avinalabs.flex.utilities.UserTypeCallback;
+import org.avinalabs.flex.utilities.UserType;
+import org.avinalabs.flex.utilities.UserUtil;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
-    private GoogleSignInClient mGoogleSignInClient;
+    private static final String TAG = "FirstLog";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        Out.d("User Authenticated: " + currentUser.getUid());
+        // TODO: Some UI Stuff
 
+        Log.d(TAG, "This happened");
 
-        // Configure sign-in to request the user's ID, email address, and basic
-        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            Log.d(TAG, "User is signed in(authenticated)");
+            UserUtil.getUserType(new redirectUser());
+        } else {
+            Log.d(TAG, "New User! Proceed to Login.");
+            Intent signIn = new Intent(this, LoginActivity.class);
+            startActivity(signIn);
+        }
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        // Check for existing Google Sign In account, if the user is already signed in
-        // the GoogleSignInAccount will be non-null.
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        // updateUI(account);
+    // Let's make this a lambda function later.
+    class redirectUser implements UserTypeCallback {
+        @Override
+        public void completion(UserType userType) {
+            if (userType == UserType.facilitator) {
+                Log.d(TAG, "Facilitator found!");
+                Intent toFHome = new Intent(FirstActivity.this, FHomeActivity.class);
+                startActivity(toFHome);
+            }
+            else if(userType == UserType.participant) {
+                Log.d(TAG, "Participant found!");
+                Intent toPHome = new Intent(FirstActivity.this, PHomeActivity.class);
+                startActivity(toPHome);
+            }
+            else if (userType == UserType.newUser) {
+                Log.d(TAG, "User Not Found in Database – assume New User! Proceed to Login.");
+                Intent toLogin = new Intent(FirstActivity.this, LoginActivity.class);
+                startActivity(toLogin);
+            }
+        }
     }
 }
+

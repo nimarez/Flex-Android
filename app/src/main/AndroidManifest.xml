@@ -21,6 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".facilitators.FHomeActivity" />
+        <activity android:name=".participants.PHomeActivity" />
+        <activity android:name=".SelectUserTypeActivity" />
+        <activity android:name=".participants.PCreateProfileActivity" />
+        <activity android:name=".facilitators.FCreateProfileActivity" />
+        <activity android:name=".facilitators.FRequestAccessActivity" />
+        <activity android:name=".facilitators.FThankForEnrollingActivity" />
+        <activity android:name=".participants.PWelcomeActivity"></activity>
     </application>
 
 </manifest>
