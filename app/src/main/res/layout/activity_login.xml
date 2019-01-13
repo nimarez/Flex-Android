@@ -6,36 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <com.google.android.gms.common.SignInButton
+    <Button
         android:id="@+id/sign_in_button"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_width="288dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorPrimary"
+        android:text="Let's get started"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.Button"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="175dp"
+        android:layout_height="164dp"
+        android:layout_marginBottom="23dp"
+        android:alpha="1"
+        android:cropToPadding="true"
+        android:paddingTop="5dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@mipmap/ic_primaryseminar" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Log in "
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:text="Welcome to "
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="158dp"
-        android:layout_height="167dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Flex"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="282dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:alpha="0.65"
+        android:text="By using this platform, you are agreeing to the Privacy Policy &amp; Terms of Service. "
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47"
-        app:srcCompat="@mipmap/ic_seminar_launcher_round" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
 
 </android.support.constraint.ConstraintLayout>

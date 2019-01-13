@@ -18,23 +18,12 @@
                                 <PersistentState>
                                   <option name="children">
                                     <map>
-                                      <entry key="backgroundImage">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="scalingPercent" value="90" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
                                       <entry key="foregroundImage">
                                         <value>
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="78" />
+                                                <entry key="scalingPercent" value="104" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -44,9 +33,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Desktop/Seminar.png" />
-                                      <entry key="outputName" value="ic_seminar_launcher" />
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="fafafa" />
+                                      <entry key="backgroundLayerName" value="ic_primarySeminar_background" />
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../seminar-icon.jpg" />
+                                      <entry key="outputName" value="ic_primaryseminar" />
                                     </map>
                                   </option>
                                 </PersistentState>

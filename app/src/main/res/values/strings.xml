@@ -3,4 +3,78 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_frequest_access">FRequestAccessActivity</string>
     <!--<string name="default_web_client_id">214614703532-sm99b4luo9kto7dunk72jnf8behrdgt3.apps.googleusercontent.com</string>-->
+    <string-array name="race_array">
+        <item>Select</item>
+        <item>American Indian/Alaska Native</item>
+        <item>Asian</item>
+        <item>Black/African American</item>
+        <item>Native Hawaiian/Other Pacific Islander</item>
+        <item>White</item>
+        <item>Other</item>
+        <item>Prefer not to answer</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Select</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Transgender</item>
+        <item>Gay</item>
+        <item>Lesbian</item>
+        <item>Bisexual</item>
+        <item>Other</item>
+        <item>Prefer not to answer</item>
+    </string-array>
+
+    <string-array name="sex_array">
+        <item>Select</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Intersex</item>
+        <item>Other</item>
+        <item>Prefer not to answer</item>
+    </string-array>
+
+    <string-array name="ed_array">
+        <item>Select</item>
+        <item>Less than high school</item>
+        <item>High school or equivalent</item>
+        <item>Some college(no degree)</item>
+        <item>Associate degree</item>
+        <item>Bachelor degree</item>
+        <item>Master degree</item>
+        <item>Doctoral or professional degree</item>
+        <item>Prefer not to answer</item>
+    </string-array>
+
+    <string-array name="int_array">
+        <item>Select</item>
+        <item>Reading</item>
+        <item>Puzzles</item>
+        <item>Research</item>
+        <item>Writing</item>
+        <item>Programming</item>
+        <item>Building</item>
+        <item>Music</item>
+        <item>Visual Art</item>
+        <item>Games</item>
+        <item>Other</item>
+        <item>Unsure</item>
+    </string-array>
+
+    <string-array name="ath_array">
+        <item>Select</item>
+        <item>Varsity sport(s)</item>
+        <item>Club sport(s)</item>
+        <item>Casual sport(s)</item>
+        <item>Aquatic sport(s)</item>
+        <item>Winter sport(s)</item>
+        <item>Field sport(s)</item>
+        <item>Hiking</item>
+        <item>Biking</item>
+        <item>Weights/lifting</item>
+        <item>Other</item>
+        <item>Unsure</item>
+    </string-array>
+
 </resources>

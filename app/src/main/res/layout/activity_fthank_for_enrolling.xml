@@ -10,38 +10,30 @@
         android:id="@+id/FTH_participant_button2"
         android:layout_width="288dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="#4c7d9e"
+        android:background="@color/colorPrimary"
         android:text="I'm ready"
-        android:textColor="#FFF"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.Button"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        tools:layout_editor_absoluteY="251dp" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Thank you for enrolling as a facilitator!  "
-        android:textSize="18sp"
+        android:text="Thank you for enrolling as a facilitator! \n\n We're going to start by creating your profile."
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="We're going to start by creating your profile."
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 </android.support.constraint.ConstraintLayout>

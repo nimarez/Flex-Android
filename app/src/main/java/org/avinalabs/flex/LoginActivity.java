@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private SignInButton signInButton;
+    private Button signInButton;
     private static final int RC_SIGN_IN = 123;
     private static final String TAG = "LoginLog";
 
@@ -28,8 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        SignInButton signInButton = findViewById(R.id.sign_in_button);
-        signInButton.setSize(SignInButton.SIZE_STANDARD);
+        signInButton = findViewById(R.id.sign_in_button);
 
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,13 +60,14 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 Intent toSelectUserType = new Intent(LoginActivity.this, SelectUserTypeActivity.class);
                 startActivity(toSelectUserType);
-
+                // ...
             } else {
                 // Sign in failed. If response is null the user canceled the
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
                 // ...
                 Log.d(TAG, "Sign in failed with error code: " + response.getError().getErrorCode());
+                startActivity(new Intent(LoginActivity.this, LoginActivity.class));
             }
         }
     }

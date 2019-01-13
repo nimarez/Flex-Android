@@ -34,7 +34,7 @@ public class SeminarModel {
     private String documentID;
 
 
-    public SeminarModel(){
+    public SeminarModel() {
 
     }
 
@@ -117,7 +117,12 @@ public class SeminarModel {
                     QuerySnapshot data = task.getResult();
                     if (data != null) {
                         SeminarModel first = data.getDocuments().get(0).toObject(SeminarModel.class);
-                        first.writeParticipant(participantId);
+                        try {
+                            first.writeParticipant(participantId);
+                        }
+                        catch (Exception e) {
+                            Log.d(TAG, e.toString() + "occured while writing to database.");
+                        }
                         callback.completion(first);
                     }
                     else {
